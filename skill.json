@@ -1,0 +1,38 @@
+{
+  "name": "genpark-modular-rag-pipeline-retriever-evaluator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Modular RAG pipeline engine coordinating multi-stage document retrieval, reranking, and generation nodes.",
+  "author": "genpark",
+  "category": "rag-pipeline",
+  "tags": [
+    "haystack",
+    "modular-rag",
+    "hybrid-retrieval",
+    "reranker",
+    "evaluation-pipeline"
+  ],
+  "inputs": {
+    "user_query": {
+      "type": "string"
+    },
+    "documents_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "pipeline_execution_id": {
+      "type": "string"
+    },
+    "cross_encoder_rerank_top_k": {
+      "type": "integer"
+    },
+    "retrieval_mrr_score": {
+      "type": "number"
+    },
+    "synthesized_grounded_answer": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
